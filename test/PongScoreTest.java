@@ -18,6 +18,7 @@ public class PongScoreTest extends TestCase {
 
   /**
    * Test of getScore method, of class PongScore.
+   * Really only tests constructor.  Rest of test is in testScorePoints.
    */
   public void testGetScore() {
     PongScore score = new PongScore();
