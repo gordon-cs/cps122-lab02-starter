@@ -53,7 +53,7 @@ public class PongPaddle {
    * @return the X coordinate of the left edge of this PongPaddle.
    */
   public int getLeftX() {
-    return 2;  // STUB - REPLACE THIS LINE
+    return x;
   }
 
   /**
@@ -62,7 +62,7 @@ public class PongPaddle {
    * @return the Y coordinate of the top edge of this PongPaddle.
    */
   public int getTopY() {
-    return 3;  // STUB - REPLACE THIS LINE
+    return y;
   }
 
   /**
@@ -71,7 +71,7 @@ public class PongPaddle {
    * @return the X coordinate of the right edge of this PongPaddle.
    */
   public int getRightX() {
-    return 4;  // STUB - REPLACE THIS LINE
+    return x + width - 1;
   }
 
   /**
@@ -80,7 +80,7 @@ public class PongPaddle {
    * @return the Y coordinate of the bottom edge of this PongPaddle.
    */
   public int getBottomY() {
-    return 5;  // STUB - REPLACE THIS LINE
+    return y + height - 1;
   }
 
 }
