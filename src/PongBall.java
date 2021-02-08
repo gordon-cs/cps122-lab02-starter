@@ -39,9 +39,28 @@ public class PongBall {
    * Reverse the X direction of this PongBall.  This method
    * is invoked by the Pong application each time this PongBall
    * collides with a vertical obstruction such as a wall or paddle.
-   * The X direction can be reversed by changing the sign of the xVelocity.
    */
   public void bounceX() {
+    // The X direction can be reversed by changing the sign of the xVelocity.
+
+  }
+
+  /**
+   * Reverse the Y direction of this PongBall.  This method is invoked
+   * by the Pong application each time this PongBall collides with a
+   * horizontal obstruction such as a wall or the top/bottom edge of
+   * a paddle.
+   */
+  public void bounceY() {
+    // The Y direction can be reversed by changing the sign of the yVelocity.
+  }
+
+  /**
+   * Return the current X position of this PongBall.
+   *
+   * @return the X position of this PongBall.
+   */
+  public int getX() {
     return 150;	// STUB - REPLACE THIS LINE
   }
 
