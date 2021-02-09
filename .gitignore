@@ -33,3 +33,6 @@ Icon?
 /build/
 /dist/
 /out/
+
+# Private NetBeans config
+/nbproject/private/
