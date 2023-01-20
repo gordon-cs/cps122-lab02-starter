@@ -25,6 +25,9 @@ hs_err_pid*
 # Emacs temporary files
 *~
 
+# Mac files
+.DS_Store
+
 # Google Drive icon files
 Icon?
 
