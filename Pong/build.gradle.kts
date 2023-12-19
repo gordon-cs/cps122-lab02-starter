@@ -11,5 +11,5 @@ dependencies {
 }
 
 application {
-    mainClass.set("pong.App")
+    mainClass.set("pong.Pong")
 }
