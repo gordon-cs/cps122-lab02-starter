@@ -14,14 +14,14 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author russtuck
  */
-class PongBallTest {
+class BallTest {
 
   /**
-   * Test of move method, of class PongBall.
+   * Test of move method, of class Ball.
    */
   @Test
   void testMove() {
-    PongBall ball = new PongBall(0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.move();
     assertEquals(5, ball.getX());
     assertEquals(11, ball.getY());
@@ -31,11 +31,11 @@ class PongBallTest {
   }
 
   /**
-   * Test of bounceX method, of class PongBall.
+   * Test of bounceX method, of class Ball.
    */
   @Test
   void testBounceX() {
-    PongBall ball = new PongBall(0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.bounceX();
     ball.move();
     assertEquals(-5, ball.getX());
@@ -45,11 +45,11 @@ class PongBallTest {
   }
 
   /**
-   * Test of bounceY method, of class PongBall.
+   * Test of bounceY method, of class Ball.
    */
   @Test
   void testBounceY() {
-    PongBall ball = new PongBall(0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.bounceY();
     ball.move();
     assertEquals(-9, ball.getY());
@@ -59,24 +59,24 @@ class PongBallTest {
   }
 
   /**
-   * Test of getX method, of class PongBall.
+   * Test of getX method, of class Ball.
    */
   @Test
   void testGetX() {
-    PongBall ball = new PongBall(0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     assertEquals(0, ball.getX());
-    ball = new PongBall(-5, 1, 5, 10);
+    ball = new Ball(-5, 1, 5, 10);
     assertEquals(-5, ball.getX());
   }
 
   /**
-   * Test of getY method, of class PongBall.
+   * Test of getY method, of class Ball.
    */
   @Test
   void testGetY() {
-    PongBall ball = new PongBall(0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     assertEquals(1, ball.getY());
-    ball = new PongBall(-5, 35, 5, 10);
+    ball = new Ball(-5, 35, 5, 10);
     assertEquals(35, ball.getY());
   }
 

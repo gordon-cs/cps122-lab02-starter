@@ -3,15 +3,15 @@ package pong;
 import java.util.TimerTask;
 
 public class GameTick extends TimerTask {
-    private PongBall ball;
+    private Ball ball;
     private Canvas canvas;
-    private PongScore p1;
-    private PongScore p2;
-    private PongPaddle paddle1;
-    private PongPaddle paddle2;
+    private Score p1;
+    private Score p2;
+    private Paddle paddle1;
+    private Paddle paddle2;
 
-    public GameTick(PongBall ball, Canvas canvas, PongPaddle paddle1, PongPaddle paddle2, PongScore player1,
-            PongScore player2) {
+    public GameTick(Ball ball, Canvas canvas, Paddle paddle1, Paddle paddle2, Score player1,
+            Score player2) {
         this.ball = ball;
         this.canvas = canvas;
         this.p1 = player1;

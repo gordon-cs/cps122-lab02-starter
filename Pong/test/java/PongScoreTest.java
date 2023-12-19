@@ -14,24 +14,24 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author russtuck
  */
-public class PongScoreTest {
+public class ScoreTest {
 
   /**
-   * Test of getScore method, of class PongScore.
+   * Test of getScore method, of class Score.
    * Really only tests constructor. Rest of test is in testScorePoints.
    */
   @Test
   void testGetScore() {
-    PongScore score = new PongScore();
+    Score score = new Score();
     assertEquals(0, score.getScore());
   }
 
   /**
-   * Test of scorePoints method, of class PongScore.
+   * Test of scorePoints method, of class Score.
    */
   @Test
   void testScorePoints() {
-    PongScore score = new PongScore();
+    Score score = new Score();
     score.scorePoints(5);
     assertEquals(5, score.getScore());
   }

@@ -11,21 +11,21 @@ import javax.swing.JPanel;
 public class Canvas extends JPanel implements KeyListener {
     private int width;
     private int height;
-    private PongBall ball;
-    private PongPaddle paddle1;
-    private PongPaddle paddle2;
-    private PongScore player1;
-    private PongScore player2;
+    private Ball ball;
+    private Paddle paddle1;
+    private Paddle paddle2;
+    private Score player1;
+    private Score player2;
     private Timer gameTickTimer;
 
     public Canvas(int width, int height) {
         this.width = width;
         this.height = height;
-        this.ball = new PongBall(width / 2, (height - 40) / 2 + 5, 3, 4);
-        this.paddle1 = new PongPaddle((height - 40) / 2 - 20, 25, 10, 50);
-        this.paddle2 = new PongPaddle((height - 40) / 2 - 20, width - 35, 10, 50);
-        this.player1 = new PongScore();
-        this.player2 = new PongScore();
+        this.ball = new Ball(width / 2, (height - 40) / 2 + 5, 3, 4);
+        this.paddle1 = new Paddle((height - 40) / 2 - 20, 25, 10, 50);
+        this.paddle2 = new Paddle((height - 40) / 2 - 20, width - 35, 10, 50);
+        this.player1 = new Score();
+        this.player2 = new Score();
         this.gameTickTimer = new Timer();
         this.addKeyListener(this);
     }
