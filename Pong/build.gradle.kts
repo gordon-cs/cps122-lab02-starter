@@ -13,3 +13,7 @@ dependencies {
 application {
     mainClass.set("pong.Pong")
 }
+
+tasks.named<Test>("test") {
+    useJUnitPlatform()
+}
