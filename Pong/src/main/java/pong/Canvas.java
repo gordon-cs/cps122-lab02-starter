@@ -92,46 +92,36 @@ public class Canvas extends JPanel implements KeyListener {
     @Override
     public void keyTyped(KeyEvent keyEvent) {
         switch (keyEvent.getKeyChar()) {
-            case 'A':
-            case 'a':
+            case 'A', 'a' -> {
                 if (this.paddle1.getTopY() > 7) {
                     paddle1.moveUp(2);
                     repaint();
                 }
-                break;
+            }
 
-            case 'Z':
-            case 'z':
+            case 'Z', 'z' -> {
                 if (this.paddle1.getBottomY() < height - 30) {
                     paddle1.moveDown(2);
                     repaint();
                 }
-                break;
+            }
 
-            case 'K':
-            case 'k':
+            case 'K', 'k' -> {
                 if (this.paddle2.getTopY() > 7) {
                     paddle2.moveUp(2);
                     repaint();
                 }
-                break;
+            }
 
-            case 'M':
-            case 'm':
+            case 'M', 'm' -> {
                 if (this.paddle2.getBottomY() < height - 30) {
                     paddle2.moveDown(2);
                     repaint();
                 }
-                break;
+            }
 
-            case 'B':
-            case 'b':
-                this.gameTickTimer.scheduleAtFixedRate(
-                        new GameTick(ball, this, this.paddle1, this.paddle2, this.player1, this.player2), 0L, 40L);
-
-                break;
-            default:
-                break;
+            case 'B', 'b' -> this.gameTickTimer.scheduleAtFixedRate(
+                    new GameTick(ball, this, this.paddle1, this.paddle2, this.player1, this.player2), 0L, 40L);
         }
     }
 
