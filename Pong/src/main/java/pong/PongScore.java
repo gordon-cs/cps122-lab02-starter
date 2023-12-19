@@ -1,11 +1,13 @@
+package pong;
+
 /**
  * This class desrcibes objects that are used to track
- * the player's scores in a game of Pong.  Each PongScore
+ * the player's scores in a game of Pong. Each PongScore
  * object will keep the score for a single player.
  */
 public class PongScore {
   // Instance variable
-  private int score;  // Current score
+  private int score; // Current score
 
   /**
    * Construct a new PongScore object with an initial
@@ -20,7 +22,7 @@ public class PongScore {
    * @return the score.
    */
   public int getScore() {
-    return 0;	// STUB - REPLACE THIS LINE
+    return 0; // STUB - REPLACE THIS LINE
   }
 
   /**

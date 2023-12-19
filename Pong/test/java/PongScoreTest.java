@@ -4,23 +4,24 @@
  * and open the template in the editor.
  */
 
-import junit.framework.TestCase;
+package pong;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author russtuck
  */
-public class PongScoreTest extends TestCase {
-
-  public PongScoreTest(String testName) {
-    super(testName);
-  }
+public class PongScoreTest {
 
   /**
    * Test of getScore method, of class PongScore.
-   * Really only tests constructor.  Rest of test is in testScorePoints.
+   * Really only tests constructor. Rest of test is in testScorePoints.
    */
-  public void testGetScore() {
+  @Test
+  void testGetScore() {
     PongScore score = new PongScore();
     assertEquals(0, score.getScore());
   }
@@ -28,7 +29,8 @@ public class PongScoreTest extends TestCase {
   /**
    * Test of scorePoints method, of class PongScore.
    */
-  public void testScorePoints() {
+  @Test
+  void testScorePoints() {
     PongScore score = new PongScore();
     score.scorePoints(5);
     assertEquals(5, score.getScore());

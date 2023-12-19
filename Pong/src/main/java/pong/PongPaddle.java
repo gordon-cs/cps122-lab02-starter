@@ -1,6 +1,8 @@
+package pong;
+
 /**
  * This class describes objects that represent the paddles
- * in a Pong game.  Each PongPaddle has an (x,y) position that
+ * in a Pong game. Each PongPaddle has an (x,y) position that
  * indicates the position of the top-left corner of the paddle.
  * Each PongPaddle also has a width and a height.
  */
@@ -15,12 +17,12 @@ public class PongPaddle {
    * Construct a new PongPaddle at the specified position with the
    * specified width and height.
    *
-   * @param top the Y coordinate of the top left corner of the
-   *            new PongPaddle.
+   * @param top  the Y coordinate of the top left corner of the
+   *             new PongPaddle.
    * @param left the X coordinate of the top left corner of the
    *             new PongPaddle.
-   * @param w the width of the new PongPaddle, measured in pixels.
-   * @param h the height of the new PongPaddle, measured in pixels.
+   * @param w    the width of the new PongPaddle, measured in pixels.
+   * @param h    the height of the new PongPaddle, measured in pixels.
    */
   public PongPaddle(int top, int left, int w, int h) {
     y = top;

@@ -4,22 +4,23 @@
  * and open the template in the editor.
  */
 
-import junit.framework.TestCase;
+package pong;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author russtuck
  */
-public class PongPaddleTest extends TestCase {
-
-  public PongPaddleTest(String testName) {
-    super(testName);
-  }
+class PongPaddleTest {
 
   /**
    * Test of moveUp method, of class PongPaddle.
    */
-  public void testMoveUp() {
+  @Test
+  void testMoveUp() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     paddle.moveUp(3);
     assertEquals(2, paddle.getTopY());
@@ -30,7 +31,8 @@ public class PongPaddleTest extends TestCase {
   /**
    * Test of moveDown method, of class PongPaddle.
    */
-  public void testMoveDown() {
+  @Test
+  void testMoveDown() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     paddle.moveDown(3);
     assertEquals(8, paddle.getTopY());
@@ -41,7 +43,8 @@ public class PongPaddleTest extends TestCase {
   /**
    * Test of getLeftX method, of class PongPaddle.
    */
-  public void testGetLeftX() {
+  @Test
+  void testGetLeftX() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     assertEquals(10, paddle.getLeftX());
   }
@@ -49,7 +52,8 @@ public class PongPaddleTest extends TestCase {
   /**
    * Test of getTopY method, of class PongPaddle.
    */
-  public void testGetTopY() {
+  @Test
+  void testGetTopY() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     assertEquals(5, paddle.getTopY());
   }
@@ -57,7 +61,8 @@ public class PongPaddleTest extends TestCase {
   /**
    * Test of getRightX method, of class PongPaddle.
    */
-  public void testGetRightX() {
+  @Test
+  void testGetRightX() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     assertEquals(24, paddle.getRightX());
   }
@@ -65,7 +70,8 @@ public class PongPaddleTest extends TestCase {
   /**
    * Test of getBottomY method, of class PongPaddle.
    */
-  public void testGetBottomY() {
+  @Test
+  void testGetBottomY() {
     PongPaddle paddle = new PongPaddle(5, 10, 15, 30);
     assertEquals(34, paddle.getBottomY());
   }

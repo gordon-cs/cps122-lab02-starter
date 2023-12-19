@@ -1,35 +1,26 @@
+package pong;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author russtuck
  */
-public class PongBallTest extends TestCase {
-
-  public PongBallTest(String testName) {
-    super(testName);
-  }
-
-  @Override
-  protected void setUp() throws Exception {
-    super.setUp();
-  }
-
-  @Override
-  protected void tearDown() throws Exception {
-    super.tearDown();
-  }
+class PongBallTest {
 
   /**
    * Test of move method, of class PongBall.
    */
-  public void testMove() {
+  @Test
+  void testMove() {
     PongBall ball = new PongBall(0, 1, 5, 10);
     ball.move();
     assertEquals(5, ball.getX());
@@ -42,7 +33,8 @@ public class PongBallTest extends TestCase {
   /**
    * Test of bounceX method, of class PongBall.
    */
-  public void testBounceX() {
+  @Test
+  void testBounceX() {
     PongBall ball = new PongBall(0, 1, 5, 10);
     ball.bounceX();
     ball.move();
@@ -55,7 +47,8 @@ public class PongBallTest extends TestCase {
   /**
    * Test of bounceY method, of class PongBall.
    */
-  public void testBounceY() {
+  @Test
+  void testBounceY() {
     PongBall ball = new PongBall(0, 1, 5, 10);
     ball.bounceY();
     ball.move();
@@ -68,7 +61,8 @@ public class PongBallTest extends TestCase {
   /**
    * Test of getX method, of class PongBall.
    */
-  public void testGetX() {
+  @Test
+  void testGetX() {
     PongBall ball = new PongBall(0, 1, 5, 10);
     assertEquals(0, ball.getX());
     ball = new PongBall(-5, 1, 5, 10);
@@ -78,7 +72,8 @@ public class PongBallTest extends TestCase {
   /**
    * Test of getY method, of class PongBall.
    */
-  public void testGetY() {
+  @Test
+  void testGetY() {
     PongBall ball = new PongBall(0, 1, 5, 10);
     assertEquals(1, ball.getY());
     ball = new PongBall(-5, 35, 5, 10);
