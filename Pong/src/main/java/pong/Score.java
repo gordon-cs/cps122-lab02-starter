@@ -22,7 +22,7 @@ public class Score {
    * @return the score.
    */
   public int getScore() {
-    return 0; // STUB - REPLACE THIS LINE
+    return score; // STUB - REPLACE THIS LINE
   }
 
   /**
@@ -31,5 +31,6 @@ public class Score {
    * @param points the number of points to add to the score.
    */
   public void scorePoints(int points) {
+    score += points;
   }
 }

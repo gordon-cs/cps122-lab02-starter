@@ -21,7 +21,7 @@ class PaddleTest {
    */
   @Test
   void testMoveUp() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     paddle.moveUp(3);
     assertEquals(2, paddle.getTopY());
     paddle.moveUp(10);
@@ -33,7 +33,7 @@ class PaddleTest {
    */
   @Test
   void testMoveDown() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     paddle.moveDown(3);
     assertEquals(8, paddle.getTopY());
     paddle.moveDown(12);
@@ -45,7 +45,7 @@ class PaddleTest {
    */
   @Test
   void testGetLeftX() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     assertEquals(10, paddle.getLeftX());
   }
 
@@ -54,7 +54,7 @@ class PaddleTest {
    */
   @Test
   void testGetTopY() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     assertEquals(5, paddle.getTopY());
   }
 
@@ -63,7 +63,7 @@ class PaddleTest {
    */
   @Test
   void testGetRightX() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     assertEquals(24, paddle.getRightX());
   }
 
@@ -72,7 +72,7 @@ class PaddleTest {
    */
   @Test
   void testGetBottomY() {
-    Paddle paddle = new Paddle(5, 10, 15, 30);
+    Paddle paddle = new Paddle(4, 5, 10, 15, 30);
     assertEquals(34, paddle.getBottomY());
   }
 

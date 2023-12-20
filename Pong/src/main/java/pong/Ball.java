@@ -8,6 +8,7 @@ package pong;
  */
 public class Ball {
   // Instance variables
+  public int radius; // radius of the ball, used to detect collisions with other game objects
   private int x; // Current horizontal position of the ball
   private int y; // Current vertical position of the ball
   private int xVelocity; // Current horizontal velocity of the ball
@@ -24,7 +25,12 @@ public class Ball {
    * @param initYV the initial velocity of the new Ball in
    *               the Y Direction.
    */
-  public Ball(int initX, int initY, int initXV, int initYV) {
+  public Ball(int radius, int initX, int initY, int initXV, int initYV) {
+    this.radius = radius;
+    x = initX;
+    y = initY;
+    xVelocity = initXV;
+    yVelocity = initYV;
   }
 
   /**
@@ -35,6 +41,8 @@ public class Ball {
    * yVelocity.
    */
   public void move() {
+    x += xVelocity;
+    y += yVelocity;
   }
 
   /**
@@ -44,7 +52,7 @@ public class Ball {
    */
   public void bounceX() {
     // The X direction can be reversed by changing the sign of the xVelocity.
-
+    xVelocity *= -1;
   }
 
   /**
@@ -55,6 +63,7 @@ public class Ball {
    */
   public void bounceY() {
     // The Y direction can be reversed by changing the sign of the yVelocity.
+    yVelocity *= -1;
   }
 
   /**
@@ -63,7 +72,7 @@ public class Ball {
    * @return the X position of this Ball.
    */
   public int getX() {
-    return 150; // STUB - REPLACE THIS LINE
+    return x; // STUB - REPLACE THIS LINE
   }
 
   /**
@@ -72,6 +81,6 @@ public class Ball {
    * @return the Y position of this Ball.
    */
   public int getY() {
-    return 80; // STUB - REPLACE THIS LINE
+    return y; // STUB - REPLACE THIS LINE
   }
 }

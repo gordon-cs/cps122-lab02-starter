@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 
 public class Pong {
     public static void main(String[] args) {
-        Pong pong = new Pong(300, 300);
+        Pong pong = new Pong(600, 600);
         pong.show();
     }
 
