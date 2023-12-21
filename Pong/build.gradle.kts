@@ -11,7 +11,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("pong.Pong")
+    mainClass.set("pong.internal.Pong")
 }
 
 tasks.named<Test>("test") {

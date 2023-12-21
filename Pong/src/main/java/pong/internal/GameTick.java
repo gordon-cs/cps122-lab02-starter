@@ -1,5 +1,6 @@
-package pong;
+package pong.internal;
 
+import pong.*;
 import java.util.TimerTask;
 import java.util.function.Consumer;
 

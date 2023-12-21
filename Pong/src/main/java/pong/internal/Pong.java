@@ -1,4 +1,4 @@
-package pong;
+package pong.internal;
 
 import java.awt.Container;
 import javax.swing.JFrame;
