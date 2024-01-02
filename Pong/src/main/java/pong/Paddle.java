@@ -7,7 +7,6 @@ package pong;
  * Each Paddle also has a width and a height.
  */
 public class Paddle {
-  public int speed;
   // Instance variables
   private int x;
   private int y;
@@ -25,8 +24,7 @@ public class Paddle {
    * @param w    the width of the new Paddle, measured in pixels.
    * @param h    the height of the new Paddle, measured in pixels.
    */
-  public Paddle(int speed, int top, int left, int w, int h) {
-    this.speed = speed;
+  public Paddle(int top, int left, int w, int h) {
     y = top;
     x = left;
     width = w;

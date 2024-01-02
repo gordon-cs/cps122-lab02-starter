@@ -18,6 +18,7 @@ public class Canvas extends JPanel implements KeyListener {
     private final Ball ball;
     private final Paddle paddle1;
     private final Paddle paddle2;
+    private final int paddleSpeed;
     private final Score player1;
     private final Score player2;
     private final Timer gameTickTimer;
@@ -38,14 +39,13 @@ public class Canvas extends JPanel implements KeyListener {
 
         int paddleHeight = height / 6;
         int paddleWidth = width / 30;
+        paddleSpeed = width / 75;
         paddle1 = new Paddle(
-                width / 75,
                 field.midpoint - (paddleHeight / 2),
                 field.leftEdge + Field.goalWidth + paddleWidth,
                 paddleWidth,
                 paddleHeight);
         paddle2 = new Paddle(
-                width / 75,
                 field.midpoint - (paddleHeight / 2),
                 field.rightEdge - Field.goalWidth - paddleWidth,
                 paddleWidth,
@@ -120,28 +120,28 @@ public class Canvas extends JPanel implements KeyListener {
         switch (keyEvent.getKeyChar()) {
             case 'A', 'a' -> {
                 if (paddle1.getTopY() > field.topEdge) {
-                    paddle1.moveUp(paddle1.speed);
+                    paddle1.moveUp(paddleSpeed);
                     repaint();
                 }
             }
 
             case 'Z', 'z' -> {
                 if (paddle1.getBottomY() < field.bottomEdge) {
-                    paddle1.moveDown(paddle1.speed);
+                    paddle1.moveDown(paddleSpeed);
                     repaint();
                 }
             }
 
             case 'K', 'k' -> {
                 if (paddle2.getTopY() > field.topEdge) {
-                    paddle2.moveUp(paddle2.speed);
+                    paddle2.moveUp(paddleSpeed);
                     repaint();
                 }
             }
 
             case 'M', 'm' -> {
                 if (paddle2.getBottomY() < field.bottomEdge) {
-                    paddle2.moveDown(paddle2.speed);
+                    paddle2.moveDown(paddleSpeed);
                     repaint();
                 }
             }
