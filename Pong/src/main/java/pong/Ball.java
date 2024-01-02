@@ -25,10 +25,7 @@ public class Ball {
    *               the Y Direction.
    */
   public Ball(int initX, int initY, int initXV, int initYV) {
-    x = initX;
-    y = initY;
-    xVelocity = initXV;
-    yVelocity = initYV;
+    // TODO: Complete constructor by assigning all initial properties
   }
 
   /**
@@ -39,8 +36,7 @@ public class Ball {
    * yVelocity.
    */
   public void move() {
-    x += xVelocity;
-    y += yVelocity;
+    // TODO: Move the ball
   }
 
   /**
@@ -49,8 +45,8 @@ public class Ball {
    * collides with a vertical obstruction such as a wall or paddle.
    */
   public void bounceX() {
-    // The X direction can be reversed by changing the sign of the xVelocity.
-    xVelocity *= -1;
+    // TODO: Bounce in the X direction. The X direction can be reversed by changing
+    // the sign of the xVelocity.
   }
 
   /**
@@ -60,8 +56,8 @@ public class Ball {
    * a paddle.
    */
   public void bounceY() {
-    // The Y direction can be reversed by changing the sign of the yVelocity.
-    yVelocity *= -1;
+    // TODO: Bounce in the Y direction. The Y direction can be reversed by changing
+    // the sign of the yVelocity.
   }
 
   /**
@@ -70,7 +66,8 @@ public class Ball {
    * @return the X position of this Ball.
    */
   public int getX() {
-    return x; // STUB - REPLACE THIS LINE
+    // TODO: return actual current x value
+    return 150; // STUB - REPLACE THIS LINE
   }
 
   /**
@@ -79,6 +76,7 @@ public class Ball {
    * @return the Y position of this Ball.
    */
   public int getY() {
-    return y; // STUB - REPLACE THIS LINE
+    // TODO: return actual current y value
+    return 150; // STUB - REPLACE THIS LINE
   }
 }

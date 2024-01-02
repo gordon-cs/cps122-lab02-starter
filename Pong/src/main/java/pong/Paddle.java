@@ -38,7 +38,7 @@ public class Paddle {
    * @param d a number of pixels.
    */
   public void moveUp(int d) {
-    y -= d;
+    // TODO: move the paddle up the specified amount
   }
 
   /**
@@ -48,7 +48,7 @@ public class Paddle {
    * @param d a number of pixels.
    */
   public void moveDown(int d) {
-    y += d;
+    // TODO: move the paddle down the specified amount
   }
 
   /**
