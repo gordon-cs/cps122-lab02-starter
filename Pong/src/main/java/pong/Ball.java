@@ -8,7 +8,6 @@ package pong;
  */
 public class Ball {
   // Instance variables
-  public int radius; // radius of the ball, used to detect collisions with other game objects
   private int x; // Current horizontal position of the ball
   private int y; // Current vertical position of the ball
   private int xVelocity; // Current horizontal velocity of the ball
@@ -25,8 +24,7 @@ public class Ball {
    * @param initYV the initial velocity of the new Ball in
    *               the Y Direction.
    */
-  public Ball(int radius, int initX, int initY, int initXV, int initYV) {
-    this.radius = radius;
+  public Ball(int initX, int initY, int initXV, int initYV) {
     x = initX;
     y = initY;
     xVelocity = initXV;

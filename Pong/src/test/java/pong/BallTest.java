@@ -21,7 +21,7 @@ class BallTest {
    */
   @Test
   void testMove() {
-    Ball ball = new Ball(4, 0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.move();
     assertEquals(5, ball.getX());
     assertEquals(11, ball.getY());
@@ -35,7 +35,7 @@ class BallTest {
    */
   @Test
   void testBounceX() {
-    Ball ball = new Ball(4, 0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.bounceX();
     ball.move();
     assertEquals(-5, ball.getX());
@@ -49,7 +49,7 @@ class BallTest {
    */
   @Test
   void testBounceY() {
-    Ball ball = new Ball(4, 0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     ball.bounceY();
     ball.move();
     assertEquals(-9, ball.getY());
@@ -63,9 +63,9 @@ class BallTest {
    */
   @Test
   void testGetX() {
-    Ball ball = new Ball(4, 0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     assertEquals(0, ball.getX());
-    ball = new Ball(4, -5, 1, 5, 10);
+    ball = new Ball(-5, 1, 5, 10);
     assertEquals(-5, ball.getX());
   }
 
@@ -74,9 +74,9 @@ class BallTest {
    */
   @Test
   void testGetY() {
-    Ball ball = new Ball(4, 0, 1, 5, 10);
+    Ball ball = new Ball(0, 1, 5, 10);
     assertEquals(1, ball.getY());
-    ball = new Ball(4, -5, 35, 5, 10);
+    ball = new Ball(-5, 35, 5, 10);
     assertEquals(35, ball.getY());
   }
 

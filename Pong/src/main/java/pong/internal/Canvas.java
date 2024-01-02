@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 
 public class Canvas extends JPanel implements KeyListener {
     public final Field field;
+    public final int ballRadius;
 
     private final int width;
     private final int height;
@@ -35,7 +36,8 @@ public class Canvas extends JPanel implements KeyListener {
         int innerGoalZoneHeight = height / 10;
         field = new Field(inlineMargin, topMargin, width - inlineMargin, height - bottomMargin, innerGoalZoneHeight);
 
-        ball = new Ball(width / 75, width / 2, field.midpoint, width / 100, height / 75);
+        ballRadius = width / 75;
+        ball = new Ball(width / 2, field.midpoint, width / 100, height / 75);
 
         int paddleHeight = height / 6;
         int paddleWidth = width / 30;
@@ -80,8 +82,8 @@ public class Canvas extends JPanel implements KeyListener {
     public void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         graphics.setColor(Color.red);
-        graphics.fillOval(ball.getX() - ball.radius, ball.getY() - ball.radius, ball.radius * 2,
-                ball.radius * 2);
+        graphics.fillOval(ball.getX() - ballRadius, ball.getY() - ballRadius, ballRadius * 2,
+                ballRadius * 2);
         graphics.setColor(Color.blue);
         graphics.fillRect(paddle1.getLeftX(), paddle1.getTopY(),
                 paddle1.getRightX() - paddle1.getLeftX(), paddle1.getBottomY() - paddle1.getTopY());

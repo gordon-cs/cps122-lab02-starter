@@ -23,8 +23,8 @@ public class GameTick extends TimerTask {
     }
 
     public void run() {
-        boolean bouncedLeft = ball.getX() <= canvas.field.leftEdge + ball.radius;
-        boolean bouncedRight = (double) ball.getX() >= canvas.field.rightEdge - ball.radius;
+        boolean bouncedLeft = ball.getX() <= canvas.field.leftEdge + canvas.ballRadius;
+        boolean bouncedRight = (double) ball.getX() >= canvas.field.rightEdge - canvas.ballRadius;
         if (bouncedLeft || bouncedRight) {
             ball.bounceX();
             if (bouncedLeft) {
@@ -39,8 +39,8 @@ public class GameTick extends TimerTask {
             return;
         }
 
-        boolean bouncedTop = ball.getY() <= canvas.field.topEdge + ball.radius;
-        boolean bouncedBottom = ball.getY() >= canvas.field.bottomEdge + ball.radius;
+        boolean bouncedTop = ball.getY() <= canvas.field.topEdge + canvas.ballRadius;
+        boolean bouncedBottom = ball.getY() >= canvas.field.bottomEdge + canvas.ballRadius;
         if (bouncedTop || bouncedBottom) {
             ball.bounceY();
             ball.move();
@@ -50,17 +50,17 @@ public class GameTick extends TimerTask {
 
         Consumer<Paddle> checkPaddleBounce = (paddle) -> {
             if (ball.getY() >= paddle.getTopY() && ball.getY() <= paddle.getBottomY()
-                    && ball.getX() >= paddle.getLeftX() - ball.radius
-                    && ball.getX() <= paddle.getRightX() + ball.radius) {
+                    && ball.getX() >= paddle.getLeftX() - canvas.ballRadius
+                    && ball.getX() <= paddle.getRightX() + canvas.ballRadius) {
                 ball.bounceX();
-            } else if (ball.getY() >= paddle.getTopY() - ball.radius
-                    && ball.getY() <= paddle.getBottomY() + ball.radius
+            } else if (ball.getY() >= paddle.getTopY() - canvas.ballRadius
+                    && ball.getY() <= paddle.getBottomY() + canvas.ballRadius
                     && ball.getX() >= paddle.getLeftX() && ball.getX() <= paddle.getRightX()) {
                 ball.bounceY();
-            } else if (ball.getY() >= paddle.getTopY() - ball.radius
-                    && ball.getY() <= paddle.getBottomY() + ball.radius
-                    && ball.getX() >= paddle.getLeftX() - ball.radius
-                    && ball.getX() <= paddle.getRightX() + ball.radius) {
+            } else if (ball.getY() >= paddle.getTopY() - canvas.ballRadius
+                    && ball.getY() <= paddle.getBottomY() + canvas.ballRadius
+                    && ball.getX() >= paddle.getLeftX() - canvas.ballRadius
+                    && ball.getX() <= paddle.getRightX() + canvas.ballRadius) {
                 ball.bounceY();
                 ball.bounceX();
             }
