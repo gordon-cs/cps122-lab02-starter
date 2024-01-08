@@ -30,6 +30,9 @@ public class Pong {
         frame.setLocation(100, 100);
     }
 
+    /**
+     * Display this Table on the screen.
+     */
     public void show() {
         frame.setVisible(true);
         canvas.requestFocus();

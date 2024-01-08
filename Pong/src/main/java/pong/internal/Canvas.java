@@ -1,6 +1,5 @@
 package pong.internal;
 
-import pong.*;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FontMetrics;
@@ -8,7 +7,12 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Timer;
+
 import javax.swing.JPanel;
+
+import pong.Ball;
+import pong.Paddle;
+import pong.Score;
 
 public class Canvas extends JPanel implements KeyListener {
     public final Field field;
@@ -59,6 +63,10 @@ public class Canvas extends JPanel implements KeyListener {
         this.addKeyListener(this);
     }
 
+    // NOTE: This method is for JDK1.4 or newer and replaces
+    // the depricated isFocusTraversable defined below. WHen
+    // compling with JDK1.4 or newer it is recommended that
+    // isFocusTraversable be removed.
     public boolean isFocusable() {
         return true;
     }
@@ -67,14 +75,35 @@ public class Canvas extends JPanel implements KeyListener {
         return true;
     }
 
+    /**
+     * Return the width and height of this Canvas
+     * as its preferred, minimum and maximum sizes.
+     *
+     * @return a new Dimension object specifying the width
+     *         and height of this Canvas.
+     */
     public Dimension getPreferredSize() {
         return new Dimension(width, height);
     }
 
+    /**
+     * Return the width and height of this Canvas
+     * as its preferred, minimum and maximum sizes.
+     *
+     * @return a new Dimension object specifying the width
+     *         and height of this Canvas.
+     */
     public Dimension getMinimumSize() {
         return new Dimension(width, height);
     }
 
+    /**
+     * Return the width and height of this Canvas
+     * as its preferred, minimum and maximum sizes.
+     *
+     * @return a new Dimension object specifying the width
+     *         and height of this Canvas.
+     */
     public Dimension getMaximumSize() {
         return new Dimension(width, height);
     }
@@ -160,5 +189,4 @@ public class Canvas extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent event) {
     }
-
 }

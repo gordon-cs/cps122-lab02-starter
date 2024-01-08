@@ -1,8 +1,11 @@
 package pong.internal;
 
-import pong.*;
 import java.util.TimerTask;
 import java.util.function.Consumer;
+
+import pong.Ball;
+import pong.Paddle;
+import pong.Score;
 
 public class GameTick extends TimerTask {
     private final Ball ball;
@@ -23,10 +26,20 @@ public class GameTick extends TimerTask {
     }
 
     public void run() {
+
+        // There is some bad hard coding here that should be
+        // replaced with calls the the Canvas to determine
+        // when the ball hits the borders!
+
+        // Also there are thread synchronization issues with the
+        // paddle motion and the ball motion that lead to the ball
+        // occasionally getting stuck to the paddle. Right now
+        // it seems that the ball will always disloge itself,
+        // particuarly if the paddle is moved.
+
         boolean bouncedLeft = ball.getX() <= canvas.field.leftEdge + canvas.ballRadius;
         boolean bouncedRight = (double) ball.getX() >= canvas.field.rightEdge - canvas.ballRadius;
         if (bouncedLeft || bouncedRight) {
-            ball.bounceX();
             if (bouncedLeft) {
                 GoalZone scoredInZone = canvas.field.leftGoal.zoneAt(ball.getY());
                 p2.scorePoints(scoredInZone.points());
@@ -34,6 +47,7 @@ public class GameTick extends TimerTask {
                 GoalZone scoredInZone = canvas.field.rightGoal.zoneAt(ball.getY());
                 p1.scorePoints(scoredInZone.points());
             }
+            ball.bounceX();
             ball.move();
             canvas.repaint();
             return;
