@@ -64,7 +64,7 @@ public class Canvas extends JPanel implements KeyListener {
     }
 
     // NOTE: This method is for JDK1.4 or newer and replaces
-    // the depricated isFocusTraversable defined below. WHen
+    // the deprecated isFocusTraversable defined below. When
     // compling with JDK1.4 or newer it is recommended that
     // isFocusTraversable be removed.
     public boolean isFocusable() {
